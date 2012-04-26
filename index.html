@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Project Tango Foxtrot by isotope11</title>
+    
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Project Tango Foxtrot</h1>
+        <p>SOA-ish website platform built on dcell/celluloid in the style of amazon</p>
+        <p class="view"><a href="https://github.com/isotope11/project_tango_foxtrot">View the Project on GitHub <small>isotope11/project_tango_foxtrot</small></a></p>
+        <ul>
+          <li><a href="https://github.com/isotope11/project_tango_foxtrot/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/isotope11/project_tango_foxtrot/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/isotope11/project_tango_foxtrot">Fork On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h2>project_tango_foxtrot</h2>
+
+<p>SOA-ish website platform built on dcell/celluloid in the style of amazon.</p>
+
+<h3>Inspiration</h3>
+
+<ul>
+<li>Amazon's <a href="http://queue.acm.org/detail.cfm?id=1142065">general architecture</a> is awesome.
+
+<ul>
+<li>Every component on an amazon page (menu, cart, related items, etc) is its
+own service.</li>
+<li>Any request to amazon.com fires off ~100 or so requests to various services
+responsible for each part of the page.</li>
+<li>The page itself has a timeout set, say of 150ms.  When that timeout is hit,
+any of the services that haven't yet returned are just omitted from the
+rendered page.</li>
+</ul>
+</li>
+<li>
+<a href="http://celluloid.io">DCell / Celluloid</a> is fantastic and makes ruby seem
+better.
+
+<ul>
+<li>Celluloid is an Akka-like framework to make Plain Old Ruby Objects able to
+run concurrently as Actors.</li>
+<li>An Actor runs in his own thread.</li>
+<li>DCell lets you distribute these Celluloid Actors as services all over the
+network, not ust on the same machine.  Distributed Objects generally.</li>
+</ul>
+</li>
+</ul><h3>License</h3>
+
+<p>This project is released under the MIT License.  See LICENSE for details.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/isotope11">isotope11</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
