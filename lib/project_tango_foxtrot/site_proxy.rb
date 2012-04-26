@@ -18,9 +18,11 @@ module ProjectTangoFoxtrot
     end
 
     def load_contents
-      open(@url) do |f|
-        @contents = f.read
-      end
+      @contents = open(@url){|f| f.read }
+    end
+
+    def inspect
+      "<SiteProxy url=#{url}>"
     end
   end
 end

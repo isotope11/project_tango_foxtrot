@@ -18,13 +18,17 @@ GEM
       redis
       redis-namespace
       reel (~> 0.0.1)
+    ffi (1.0.11)
     ffi (1.0.11-java)
     ffi-rzmq (0.9.3)
       ffi
     http (0.2.0)
       certified
+    http_parser.rb (0.5.3)
     http_parser.rb (0.5.3-java)
+    mime-types (1.18)
     moneta (0.6.0)
+    nio4r (0.3.3)
     nio4r (0.3.3-java)
     redis (2.2.2)
     redis-namespace (1.1.0)
@@ -33,6 +37,8 @@ GEM
       celluloid-io (>= 0.8.0)
       http (>= 0.2.0)
       http_parser.rb (>= 0.5.3)
+    typhoeus (0.3.3)
+      mime-types
 
 PLATFORMS
   java
@@ -41,3 +47,4 @@ DEPENDENCIES
   celluloid
   dcell
   reel
+  typhoeus
