@@ -19,3 +19,7 @@ SOA-ish website platform built on dcell/celluloid in the style of amazon.
   - An Actor runs in his own thread.
   - DCell lets you distribute these Celluloid Actors as services all over the
     network, not ust on the same machine.  Distributed Objects generally.
+
+### License
+
+This project is released under the MIT License.  See LICENSE for details.
