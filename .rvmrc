@@ -1,1 +1,1 @@
-rvm rbx@project_tango_foxtrot --create
+rvm jruby@project_tango_foxtrot --create
