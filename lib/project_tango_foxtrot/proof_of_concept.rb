@@ -8,24 +8,30 @@ port_number = 3001
 Reel::Server.supervise("0.0.0.0", port_number) do |connection|
   request = connection.request
 
-  puts "loading sites async"
+  if !request || (request.url != '/')
+    puts 'not root, fuggidabowdid'
+    connection.respond :ok, ''
+  else
+    puts "loading sites async"
 
-  proxy1 = SiteProxy.new('http://www.google.com')
-  proxy1.load_contents!
-  proxy2 = SiteProxy.new('http://www.cnn.com')
-  proxy2.load_contents!
+    urls = [
+      'http://www.google.com',
+      'http://www.isotope11.com'
+    ]
+    proxies = urls.map{|u| SiteProxy.new(u) }
 
-  proxies = [proxy1, proxy2]
+    #sleep 0.05 # Wait 150ms
+    content = ''
+    puts 'iterating'
+    proxies.each do |proxy|
+      proxy.load_contents!
+      content += "<h2>#{proxy.url}</h2>"
+      content += proxy.contents
+    end
 
-  sleep 0.35 # Wait 150ms
-  content = ''
-  puts 'iterating'
-  content += "<h2>#{proxy1.url}</h2>"
-  content += proxy1.contents
-  content += "<h2>#{proxy2.url}</h2>"
-  content += proxy2.contents
-
-  connection.respond :ok, content
+    connection.respond :ok, content
+    puts 'responded'
+  end
 end
 
 puts "running on #{port_number}"

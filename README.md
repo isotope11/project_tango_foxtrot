@@ -8,7 +8,7 @@ SOA-ish website platform built on dcell/celluloid in the style of amazon.
   - Every component on an amazon page (menu, cart, related items, etc) is its
     own service.
   - Any request to amazon.com fires off ~100 or so requests to various services
-    responsible for each part of the page.
+    responsible for each part of the page (on the backend).
   - The page itself has a timeout set, say of 150ms.  When that timeout is hit,
     any of the services that haven't yet returned are just omitted from the
     rendered page.
@@ -18,7 +18,7 @@ SOA-ish website platform built on dcell/celluloid in the style of amazon.
     run concurrently as Actors.
   - An Actor runs in his own thread.
   - DCell lets you distribute these Celluloid Actors as services all over the
-    network, not ust on the same machine.  Distributed Objects generally.
+    network, not just on the same machine.  Distributed Objects generally.
 
 ### License
 
