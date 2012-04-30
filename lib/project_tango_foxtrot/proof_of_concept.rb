@@ -10,7 +10,8 @@ get '/' do
 
   contents = [
     ['immediate', 0],
-    ['delayed', 0.1]
+    ['delayed', 0.1],
+    ['too long', 0.3]
   ]
   echos = contents.map{|u| Echo.new(u[0], u[1]) }
 
