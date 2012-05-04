@@ -20,6 +20,11 @@ SOA-ish website platform built on dcell/celluloid in the style of amazon.
   - DCell lets you distribute these Celluloid Actors as services all over the
     network, not just on the same machine.  Distributed Objects generally.
 
+### Expectations
+
+- Build a website using the mechanisms outlined / enabled by this framework / lib, and this proof of concept should work:
+  - want to build a basic webservice and test its throughput with ab (obv. using my dcell objects).  Once that's stable, launch same service on another machine in the network.  No other configuration.  See throughput ~double
+
 ### License
 
 This project is released under the MIT License.  See LICENSE for details.
