@@ -11,3 +11,8 @@
 # 2) Using ab, show the requests per second that the webserver can manage.
 # 3) Fire up the same project on another machine.  Perform no other configuration.
 # 4) See rps ~double.
+
+# First step  - get a manually-configured router + worker setup
+# Second step - get router + (supervisor + worker) setup
+# Third step  - Use supervisors + gossip announcements to manage the supervised spawning of my workers
+# Fourth step - Use the above to build this PoC
