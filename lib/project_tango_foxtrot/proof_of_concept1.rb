@@ -1,3 +1,9 @@
+# Proof of Concept: guaranteed time-to-render
+# ------
+# The purpose of this demonstration is to show that regardless of a
+# slow-performing query, the request is replied to in a guaranteed minimum time
+# frame.  This is a desirable trait for quite a few systems, and is also a nice
+# benefit that's not hard to gain in an SOA-style system.
 require 'sinatra'
 require File.expand_path("../echo.rb", __FILE__)
 
